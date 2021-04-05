@@ -1,0 +1,30 @@
+header{
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button{
+    width: 49%;
+    height: 50px;
+}
+
+#imagenes{
+    position: absolute;
+    top: 110px;
+    border-style: solid;
+    margin: 3%;
+    height: 80%;
+    overflow: auto;
+}
+
+.myImage{
+    width: 45%;
+    /*transform: rotate(270deg);*/
+    border-style: solid;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
