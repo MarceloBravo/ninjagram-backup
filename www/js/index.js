@@ -53,10 +53,9 @@ function takePicture(){
 function onSuccess(imageURI) {
     let imagen = document.createElement('img');
     imagen.src = imageURI;
-    imagen.className = 'myImage newImage';
+    imagen.className = `myImage ${fromCamera ? 'newImage' : 'from-file'}`;
     imagen.width = 221;
     imagen.height = 172;
-    if(fromCamera)imagen.style.transform = 'rotate(270deg)';
     document.getElementById('imagenes').appendChild(imagen);
     img = imagen;
 }
@@ -95,16 +94,13 @@ function online(){
 
 async function uploadPicture(img){
     
-    let imgName = img.src.split('/')
-
     var canvas = document.createElement("canvas");
     canvas.width = 140;
     canvas.height = 180;
 
     // Copy the image contents to the canvas
     ctx = canvas.getContext("2d");
-    ctx.rotate(-90 * Math.PI / 180);    
-    //ctx.drawImage(img, -100, 150, 120, 180);
+    ctx.rotate(-90 * Math.PI / 180); 
     ctx.drawImage(img, -180, 0, 180, 140);
 
     var image = new Image();

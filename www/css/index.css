@@ -42,3 +42,9 @@ button{
     height: 172px;
     margin: 30px -10px;
 }
+
+.from-file{
+    width: 172px;
+    height: 220px;
+    margin: 30px 10px;
+}
